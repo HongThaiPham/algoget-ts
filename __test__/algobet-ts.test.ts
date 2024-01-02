@@ -159,7 +159,7 @@ describe('AlgobetTs', () => {
     expect(valueType.decode(localState.hasRequestedPayout!.asByteArray())).toEqual(true);
   }, 10000);
 
-  test.skip('Delete application', async () => {
+  test('Delete application', async () => {
     await appClient.delete.deleteApplication(
       {},
       {
@@ -171,6 +171,3 @@ describe('AlgobetTs', () => {
     await expect(appClient.getGlobalState()).rejects.toThrow();
   });
 });
-function AccountTransactionSigner(sk: any): any {
-  throw new Error('Function not implemented.');
-}
